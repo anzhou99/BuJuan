@@ -1,0 +1,72 @@
+{
+  "$schema": "../node_modules/@tauri-apps/cli/schema.json",
+  "build": {
+    "beforeBuildCommand": "yarn build",
+    "beforeDevCommand": "yarn dev",
+    "devPath": "http://localhost:3000",
+    "distDir": "../dist"
+  },
+  "package": {
+    "productName": "BuJuan",
+    "version": "1.0.0"
+  },
+  "tauri": {
+    "allowlist": {
+      "window": { "all": true }
+    },
+    "bundle": {
+      "active": true,
+      "category": "Productivity",
+      "copyright": "by stjerne",
+      "deb": {
+        "depends": []
+      },
+      "externalBin": [],
+      "icon": [
+        "icons/32x32.png",
+        "icons/128x128.png",
+        "icons/128x128@2x.png",
+        "icons/icon.icns",
+        "icons/icon.ico"
+      ],
+      "identifier": "anzhour",
+      "longDescription": "Bu Juan;Bie Juan;Don't be a cut-throat competitor;🙅🏻‍♀️🙅🏻‍♀️🙅🏻‍♀️",
+      "macOS": {
+        "entitlements": null,
+        "exceptionDomain": "",
+        "frameworks": [],
+        "providerShortName": null,
+        "signingIdentity": null
+      },
+      "resources": [],
+      "shortDescription": "bu juan",
+      "targets": "all",
+      "windows": {
+        "certificateThumbprint": null,
+        "digestAlgorithm": "sha256",
+        "timestampUrl": ""
+      }
+    },
+    "security": {
+      "csp": null
+    },
+    "updater": {
+      "active": false
+    },
+    "windows": [
+      {
+        "fullscreen": false,
+        "height": 150,
+        "resizable": false,
+        "title": "BuJuan",
+        "width": 150,
+        "transparent": true,
+        "decorations": false,
+        "center": true,
+        "alwaysOnTop": true,
+        "skipTaskbar": true
+      }
+    ],
+    "macOSPrivateApi": true
+  }
+}

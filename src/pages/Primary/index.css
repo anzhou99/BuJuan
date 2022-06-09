@@ -1,0 +1,38 @@
+@tailwind components;
+@layer components {
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
+  .eye {
+    @apply absolute w-2 h-2 bg-black rounded-full;
+    @apply group-hover:w-1.5 group-hover:h-1.5 group-hover:shadow-[0_0_0_0.25rem_white];
+    @apply group-active:w-1.5 group-active:h-1.5 group-active:shadow-[0_0_0_0.25rem_white];
+
+    box-shadow: 1px 2px 4px #121110;
+    transition: 300ms;
+  }
+  .mouth {
+    @apply absolute top-5 left-[0.8rem] w-4 h-[0.125rem] bg-black rounded-none;
+    @apply group-hover:left-4 group-hover:w-2 group-hover:h-[0.4rem] group-hover:rounded-[1rem_1rem_0.125rem_0.125rem];
+    @apply group-active:left-4 group-active:w-2 group-active:h-[0.4rem] group-active:rounded-[1rem_1rem_0.125rem_0.125rem];
+
+    box-shadow: 1px 2px 4px #121110;
+    transition: 300ms;
+  }
+}
+
+.eye {
+  animation: blink 3500ms infinite;
+}
+@keyframes blink {
+  0%,
+  30%,
+  36%,
+  100% {
+    transform: scale(1);
+  }
+  32%,
+  34% {
+    transform: scale(1, 0);
+  }
+}
